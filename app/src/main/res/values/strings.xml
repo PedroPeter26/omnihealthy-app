@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">healthy app</string>
+    <string name="titulo">Temperatura</string>
+    <string name="subtitulo">Alerta de Temperatura Alta</string>
+    <string name="subtitulo2">Temperatura alta</string>
+    <string name="texto">Acudir al medico si los sintomas persisten</string>
+    <string name="boton">Volver a medir</string>
+    <string name="config">config</string>
 </resources>
