@@ -6,4 +6,6 @@
     <string name="texto">Acudir al medico si los sintomas persisten</string>
     <string name="boton">Volver a medir</string>
     <string name="config">config</string>
+    <string name="numero1">0</string>
+    <string name="porcentaje">%</string>
 </resources>
