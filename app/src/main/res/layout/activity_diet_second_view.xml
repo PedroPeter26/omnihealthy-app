@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FCFA"
+    tools:context=".View.DietSecondView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/titulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintBottom_toTopOf="@id/contenido"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+    app:layout_constraintStart_toStartOf="parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Elegir ingrediente"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/atras"
+            app:layout_constraintStart_toEndOf="@id/atras"
+            android:textSize="18sp"
+
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="center"/>
+        <ImageButton
+            android:id="@+id/atras"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/buscar"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/vector___0"
+
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_gravity="start|center_vertical"
+            style="@style/Widget.AppCompat.Button.Borderless"/>
+
+        <EditText
+            android:id="@+id/buscar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Buscar alimento"
+            android:textSize="17sp"
+            android:drawableLeft="@drawable/search"
+            android:drawablePadding="10dp"
+            android:drawableTint="#4F966E"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="20dp"
+            app:layout_constraintBottom_toTopOf="@id/tabLayout"
+            app:layout_constraintTop_toBottomOf="@id/atras"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@drawable/borde"
+            android:padding="10dp"
+            android:textColorHint="#4F966E"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"/>
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tabLayout"
+            app:layout_constraintTop_toBottomOf="@id/buscar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scrollbars="none">
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:minWidth="0dp"
+            app:tabGravity="fill"
+            app:tabMode="scrollable"
+            android:background="#F6FBF9"
+            app:tabTextColor="#6A866A"
+            app:tabSelectedTextColor="#0D141C"
+            app:tabIndicatorColor="#0D141C">
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frutas"
+
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Verduras"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cereales"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Carnes"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Leguminosas"
+                />
+            <com.google.android.material.tabs.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pescados"
+                />
+
+        </com.google.android.material.tabs.TabLayout>
+        </HorizontalScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:id="@+id/contenido"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:layout_marginEnd="20dp"
+
+        android:layout_marginStart="20dp"
+        app:layout_constraintTop_toBottomOf="@id/titulo"
+        app:layout_constraintBottom_toTopOf="@id/hecho"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="25dp"
+            android:padding="5dp"
+            android:background="@drawable/borde">
+            <TextView
+                android:id="@+id/nombre"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textSize="18sp"/>
+
+            <ImageButton
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/nombre"
+                app:layout_constraintHorizontal_bias="1"
+                android:src="@drawable/next"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/hecho"
+        android:drawableLeft="@drawable/bascula"
+        android:drawablePadding="13dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="15dp"
+        android:backgroundTint="#1AE570"
+        android:textSize="35dp"
+        android:textColor="#0D1C12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="200 g"
+        app:drawableTint="#0D141C" />
+</androidx.constraintlayout.widget.ConstraintLayout>

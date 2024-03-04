@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FCFA"
+    tools:context=".View.DietFirstView">
+    <LinearLayout
+        android:id="@+id/contenido"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/hecho"
+        app:layout_constraintStart_toStartOf="parent"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:id="@+id/titulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medir receta"
+                android:textSize="18sp"
+                android:layout_gravity="center"/>
+            <ImageButton
+                android:id="@+id/atras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/vector___0"
+                android:layout_gravity="start|center_vertical"
+                style="@style/Widget.AppCompat.Button.Borderless"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paso 1: Meta calorica"
+            android:textSize="18sp"
+            android:layout_margin="23dp"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Calorias"
+            android:textSize="17sp"
+
+            android:background="@drawable/borde"
+            android:padding="10dp"
+            android:textColorHint="#4F966E"
+            style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+            android:layout_marginStart="20dp">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paso 2: Pesa el ingrediente"
+            android:textSize="18sp"
+            android:layout_margin="23dp"
+            />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Coloca tu ingrediente en la pesa"
+                android:textSize="17sp"
+                android:layout_marginStart="23dp"
+                />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/scale"
+                android:layout_gravity="end"/>
+        </FrameLayout>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paso 3: Selecciona el alimento"
+            android:textSize="18sp"
+            android:layout_margin="23dp"
+            />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="23dp"
+                android:backgroundTint="#E8EDF5"
+                android:textColor="#0D1C12"
+                android:text="Agregar ingrediente"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:background="@drawable/borde">
+                <TextView
+                    android:id="@+id/nombre"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Arroz"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/peso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="200 g"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/nombre"
+                    android:textSize="14sp"/>
+                <TextView
+                    android:id="@+id/proteina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="46.3 g pt."
+                    android:layout_marginStart="15dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/peso"
+                    app:layout_constraintTop_toBottomOf="@id/nombre"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/carbohidratos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0.0 g crb."
+                    android:layout_marginStart="15dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/proteina"
+                    app:layout_constraintTop_toBottomOf="@id/nombre"
+                    android:textSize="13sp"/>
+                <TextView
+                    android:id="@+id/sodio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="7 mg sd."
+                    android:layout_marginStart="15dp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/carbohidratos"
+                    app:layout_constraintTop_toBottomOf="@id/nombre"
+                    android:textSize="13sp"/>
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/sodio"
+                    app:layout_constraintHorizontal_bias="0"
+                    android:src="@drawable/remove"
+                    style="@style/Widget.AppCompat.Button.Borderless"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/hecho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#1AE570"
+        android:textColor="#0D1C12"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Terminado"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
