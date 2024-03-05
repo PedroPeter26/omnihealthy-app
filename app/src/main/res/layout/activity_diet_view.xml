@@ -32,8 +32,11 @@
                 android:id="@+id/atras"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 android:src="@drawable/vector___0"
-                android:layout_gravity="start|center_vertical"
+
+                android:layout_marginEnd="20dp"
                 style="@style/Widget.AppCompat.Button.Borderless"/>
         </FrameLayout>
         <TextView

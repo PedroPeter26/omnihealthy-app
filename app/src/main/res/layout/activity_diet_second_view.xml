@@ -14,7 +14,6 @@
     app:layout_constraintTop_toTopOf="parent"
     app:layout_constraintBottom_toTopOf="@id/contenido"
         android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp"
     app:layout_constraintStart_toStartOf="parent">
         <TextView
             android:layout_width="wrap_content"
@@ -33,13 +32,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/buscar"
             app:layout_constraintStart_toStartOf="parent"
             android:src="@drawable/vector___0"
 
             android:layout_marginEnd="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_gravity="start|center_vertical"
             style="@style/Widget.AppCompat.Button.Borderless"/>
 
         <EditText

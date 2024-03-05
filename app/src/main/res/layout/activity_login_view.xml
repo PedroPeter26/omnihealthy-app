@@ -6,5 +6,106 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".View.LoginView">
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:id="@+id/titulo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
 
+      app:layout_constraintVertical_bias="1"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintBottom_toTopOf="@id/contenido"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <ImageButton
+        android:id="@+id/atras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/vector___0"
+
+        android:layout_marginEnd="20dp"
+        style="@style/Widget.AppCompat.Button.Borderless"/>
   </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <LinearLayout
+      android:id="@+id/contenido"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="vertical"
+      android:padding="5dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintVertical_bias="0.113">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="23dp"
+        android:text="Iniciar Sesion"
+
+        android:textSize="22sp" />
+
+    <EditText
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/borde"
+        android:hint="Correo electronico"
+        android:padding="10dp"
+        android:textColorHint="#4F966E"
+        android:textSize="17sp">
+
+    </EditText>
+
+    <EditText
+        style="@style/Widget.Material3.TextInputEditText.OutlinedBox.Dense"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/borde"
+        android:drawableRight="@drawable/eye"
+        android:drawableTint="#4F966E"
+        android:hint="Contraseña"
+        android:padding="10dp"
+        android:textColorHint="#4F966E"
+        android:textSize="17sp">
+
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/text_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:text="¿Olvidaste tu contraseña?"
+        android:textColor="#4F966E"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/hecho"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#1AE570"
+        android:text="Terminado"
+        android:textColor="#0D1C12" />
+  </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
