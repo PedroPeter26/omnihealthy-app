@@ -50,7 +50,7 @@
             android:layout_width="39dp"
             android:layout_height="42dp"
             android:src="@drawable/bell"
-
+            android:contentDescription="@string/texto2"
             app:layout_constraintBottom_toTopOf="@+id/textView4"
             app:layout_constraintEnd_toStartOf="@+id/textView3"
             app:layout_constraintStart_toStartOf="parent"
