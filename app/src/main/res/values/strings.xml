@@ -8,4 +8,9 @@
     <string name="config">config</string>
     <string name="numero1">0</string>
     <string name="porcentaje">%</string>
+    <string name="icono">icono</string>
+    <string name="titulo2">Medir Temperatura</string>
+    <string name="recuerda">Recuerda</string>
+    <string name="texto2">La pulsera debe llevarse puesta para que el
+seguimiento sea preciso.</string>
 </resources>
