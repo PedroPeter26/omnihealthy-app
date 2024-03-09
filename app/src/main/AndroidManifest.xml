@@ -13,6 +13,21 @@
         android:theme="@style/Theme.HealthyApp"
         tools:targetApi="31">
         <activity
+            android:name=".View.ControlAlcoholActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.CuidadoDelSolActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.EntrenamientoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.TermometroActivity"
+            android:exported="false" />
+        <activity
+            android:name=".View.MainActivity$Control_alcohol"
+            android:exported="false" />
+        <activity
             android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
