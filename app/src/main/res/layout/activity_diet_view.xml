@@ -91,91 +91,24 @@
             android:layout_margin="23dp"
             />
             <Button
+                android:id="@+id/nuevo_ingrediente"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="23dp"
                 android:backgroundTint="#E8EDF5"
                 android:textColor="#0D1C12"
                 android:text="Agregar ingrediente"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/alimentos"
+                android:layout_marginStart="35dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginTop="10dp"
 
-            android:layout_marginEnd="15dp"
-            android:layout_marginTop="10dp"
-            android:orientation="vertical">
-            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="12dp"
-                android:background="@drawable/borde">
-                <TextView
-                    android:id="@+id/nombre"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Arroz"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:textSize="18sp"/>
-                <TextView
-                    android:id="@+id/peso"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="200 g"
+                android:layout_height="match_parent"
+                />
+  </LinearLayout>
 
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/nombre"
-                    android:textSize="14sp"/>
-                <TextView
-                    android:id="@+id/proteina"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="46.3 g pt."
-                    android:layout_marginStart="15dp"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/peso"
-                    app:layout_constraintTop_toBottomOf="@id/nombre"
-                    android:textSize="13sp"/>
-                <TextView
-                    android:id="@+id/carbohidratos"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="0.0 g crb."
-                    android:layout_marginStart="15dp"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/proteina"
-                    app:layout_constraintTop_toBottomOf="@id/nombre"
-                    android:textSize="13sp"/>
-                <TextView
-                    android:id="@+id/sodio"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="7 mg sd."
-                    android:layout_marginStart="15dp"
-
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/carbohidratos"
-                    app:layout_constraintTop_toBottomOf="@id/nombre"
-                    android:textSize="13sp"/>
-                <ImageButton
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@id/sodio"
-                    app:layout_constraintHorizontal_bias="0"
-                    android:src="@drawable/remove"
-                    style="@style/Widget.AppCompat.Button.Borderless"/>
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </LinearLayout>
-
-    </LinearLayout>
 
 
     <Button

@@ -19,13 +19,13 @@
             android:name=".View.DietSecondView"
             android:exported="false" />
         <activity
-            android:name=".View.DietFirstView"
+            android:name=".View.MainActivity"
             android:exported="false" />
         <activity
             android:name=".View.LoginView"
             android:exported="false" />
         <activity
-            android:name=".View.MainActivity"
+            android:name=".View.DietFirstView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -2,5 +2,5 @@ package com.example.healthyapp.ViewModel;
 
 import androidx.lifecycle.ViewModel;
 
-public class DietSecondViewModel extends ViewModel {
+public class LoginViewModel extends ViewModel {
 }

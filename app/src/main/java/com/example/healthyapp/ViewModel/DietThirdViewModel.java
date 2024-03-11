@@ -1,4 +1,6 @@
 package com.example.healthyapp.ViewModel;
 
-public class DietThirdViewModel {
+import androidx.lifecycle.ViewModel;
+
+public class DietThirdViewModel extends ViewModel {
 }
