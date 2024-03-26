@@ -51,56 +51,20 @@
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/CaloriasTotales"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Calorias totales: 2000 cal"
             android:textSize="27sp"
             android:layout_margin="23dp"
             />
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/atributos"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="25dp"
-            android:padding="11dp"
-            android:background="@drawable/borde">
-            <TextView
-                android:id="@+id/nombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Total fat"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/peso"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textSize="21sp"/>
-            <TextView
-                android:id="@+id/peso"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="20.5 g"
-                android:layout_marginStart="15dp"
-                app:layout_constraintStart_toEndOf="@id/nombre"
-                app:layout_constraintEnd_toStartOf="@id/porcentaje"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textSize="19sp"/>
-            <TextView
-                android:id="@+id/porcentaje"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="0 %"
-                android:gravity="end"
-                android:layout_marginStart="15dp"
-                app:layout_constraintStart_toEndOf="@id/peso"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textSize="19sp"/>
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content"/>
     </LinearLayout>
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/estado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="25dp"
@@ -115,14 +79,26 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:text="Estas por encima de tu meta calorica"
+            android:id="@+id/title"
+            android:textColor="#F6FBF9"
+            android:layout_marginBottom="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/mensaje"
+            android:textSize="21sp"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
             android:text="Necesitas 500 calorias para alcanzar tu meta calorica"
-            android:id="@+id/message"
+            android:id="@+id/mensaje"
             android:textColor="#F6FBF9"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toStartOf="@id/icono"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
             app:layout_constraintBottom_toBottomOf="parent"
-            android:textSize="17sp"/>
+            android:textSize="16sp"/>
         <ImageView
             android:id="@+id/icono"
 
@@ -131,9 +107,9 @@
             android:src="@drawable/baseline_warning_amber_24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/message"
+            app:layout_constraintStart_toEndOf="@id/mensaje"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title"
             app:layout_constraintBottom_toBottomOf="parent"
             />
 

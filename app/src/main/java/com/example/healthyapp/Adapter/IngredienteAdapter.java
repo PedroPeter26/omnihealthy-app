@@ -1,11 +1,13 @@
 package com.example.healthyapp.Adapter;
 
 import android.annotation.SuppressLint;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -27,16 +29,19 @@ public class IngredienteAdapter extends RecyclerView.Adapter<IngredienteAdapter.
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View v = layoutInflater.inflate( R.layout.diet_food_item,parent,false);
-
-
         return new ViewHolder(v);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
         Ingrediente ingrediente=milista.get(position);
         holder.setData(ingrediente);
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    public void eliminar(View view, int pos) {
+        milista.remove(pos);
+        this.notifyDataSetChanged();
     }
 
     @Override
@@ -49,6 +54,7 @@ public class IngredienteAdapter extends RecyclerView.Adapter<IngredienteAdapter.
         TextView nombre,proteinas,sodio,calorias,peso;
         ImageButton btn;
         Ingrediente i;
+        View cuadro;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -58,6 +64,8 @@ public class IngredienteAdapter extends RecyclerView.Adapter<IngredienteAdapter.
             sodio=itemView.findViewById(R.id.sodio);
             peso=itemView.findViewById(R.id.peso);
             btn=itemView.findViewById(R.id.eliminar);
+            btn.setOnClickListener(this);
+            cuadro=itemView;
 
         }
 
@@ -73,9 +81,7 @@ public class IngredienteAdapter extends RecyclerView.Adapter<IngredienteAdapter.
 
         @Override
         public void onClick(View view) {
-
+            eliminar(view,getLayoutPosition());
         }
-
     }
-
 }

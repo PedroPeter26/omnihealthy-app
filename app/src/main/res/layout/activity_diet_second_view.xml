@@ -67,6 +67,7 @@
             app:layout_constraintStart_toStartOf="parent"
             android:scrollbars="none">
         <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tab"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginTop="20dp"
@@ -127,34 +128,11 @@
         app:layout_constraintStart_toStartOf="parent"
         android:orientation="vertical">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/alimentos"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="25dp"
-            android:padding="5dp"
-            android:background="@drawable/borde">
-            <TextView
-                android:id="@+id/nombre"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Apple"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                android:textSize="18sp"/>
-
-            <ImageButton
-                android:id="@+id/next"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/nombre"
-                app:layout_constraintHorizontal_bias="1"
-                android:src="@drawable/next"
-                style="@style/Widget.AppCompat.Button.Borderless"/>
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 
     <TextView

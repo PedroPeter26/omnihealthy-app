@@ -6,8 +6,11 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import static com.example.healthyapp.Constants.constants.CALORIAS_GLOBALES;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.healthyapp.Adapter.IngredienteAdapter;
@@ -20,12 +23,16 @@ import java.util.List;
 public class DietFirstView extends AppCompatActivity implements View.OnClickListener {
 
     DietFirstViewModel viewModel;
+    EditText calorias;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_diet_view);
 
         findViewById(R.id.nuevo_ingrediente).setOnClickListener(this);
+
+        calorias = findViewById(R.id.caloriasEdit);
+        calorias.setText(CALORIAS_GLOBALES.toString());
 
         RecyclerView recyclerView=findViewById(R.id.alimentos);
         viewModel = new ViewModelProvider(this).get(DietFirstViewModel.class);
